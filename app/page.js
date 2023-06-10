@@ -1,10 +1,34 @@
-import Image from 'next/image'
-import Navbar from './components/header/navbar'
+'use client'
+// import Image from 'next/image'
+// import Navbar from './components/header/navbar'
+// import Sidebar from './components/sidebar/sidebar'
+import React,{useContext} from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
-export default function Home() {
+import Dashboard from '@/pages/dashboard/dashboard';
+import About from '@/pages/about/about';
+import Users from '@/pages/user';
+import Contact from '@/pages/contact/contact';
+import Sidebar from './components/menu/page';
+
+ const  Home = () =>  {
+   
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-2">
-        <Navbar/>
-    </main>
+    <div className=' relative flex flex-row w-full  z-1  align-middle items-center justify-stretch gap-x-4 '>
+            
+            <Router>
+                <Sidebar />
+                 <Routes>
+                    <Route path="/" element={<Dashboard/>} />
+                    <Route path='/about' element={<About/>} />
+                    <Route path='/contact' element={<Contact/>} />
+                    <Route path='/user' element={<Users/>} />
+                </Routes>
+            </Router>
+        </div>
+    
+    
   )
 }
+
+export default Home
