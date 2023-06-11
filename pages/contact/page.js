@@ -1,9 +1,8 @@
-'use client'
 import React from 'react'
 
 const Contact = () => {
   return (
-    <div>Contact Us</div>
+    <div className='p-5'>Contact Us</div>
   )
 }
 

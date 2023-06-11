@@ -8,7 +8,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Dashboard from '@/pages/dashboard/dashboard';
 import About from '@/pages/about/about';
 import Users from '@/pages/user';
-import Contact from '@/pages/contact/contact';
+import Contact from '@/pages/contact/page';
 import Sidebar from './components/menu/page';
 
  const  Home = () =>  {

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
+import Search from '../search/page'
 
 const Navbar = () => {
   return (
@@ -9,11 +10,7 @@ const Navbar = () => {
        <Image src="/todo-logo.png"  alt='todo-logo' width={60} height={60}  priority/>
        
        <div class="w-full px-2">
-  <input
-    type="search"
-    className="relative m-0 block w-full min-w-0 flex-auto rounded   bg-transparent bg-clip-padding px-3 py-[0.25rem]  font-normal leading-[1.6] text-white outline-none transition duration-200 ease-in-out focus:z-[3]  focus:text-white placeholder:text-white focus:outline-none hover:text-white  dark:text-white dark:placeholder:text-white "
-    id="exampleSearch"
-    placeholder="Search..." />
+        <Search/>
 </div>
     </nav>
     </header>
